@@ -20,6 +20,9 @@ class HiitCountdownPageCubit extends Cubit<HiitCountdownPageState> {
   void playCAudio() async{
     var a =await audioCache.play("coin.mp3");
   }
+  void playFinishAudio() async{
+    var a =await audioCache.play("over.mp3");
+  }
   void startExerciseCountdown() {
 
     _tickerSubscription?.cancel();

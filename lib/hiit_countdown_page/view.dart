@@ -115,6 +115,7 @@ class _HiitCountdownPagePageState extends ErisedState<HiitCountdownPagePage> {
                     case 4:
                       {
                         sleep(Duration(seconds: 1));
+                        BlocProvider.of<HiitCountdownPageCubit>(context).playFinishAudio();
                         BlocProvider.of<HiitCountdownPageCubit>(context)
                             .startRestCountdown();
 
@@ -292,6 +293,7 @@ class _HiitCountdownPagePageState extends ErisedState<HiitCountdownPagePage> {
                       break;
                     case 4:
                       {
+                        BlocProvider.of<HiitCountdownPageCubit>(context).playFinishAudio();
                         if (state.frequency != 0) {
                           BlocProvider.of<HiitCountdownPageCubit>(context)
                               .minusFrequency();
