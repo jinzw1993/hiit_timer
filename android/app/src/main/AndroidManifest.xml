@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jinsagitta.hiit_timer">
-   <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
         android:label="hiit_timer"
         android:icon="@mipmap/ic_launcher">
         <activity

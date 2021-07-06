@@ -276,6 +276,7 @@ class _HiitPageState extends ErisedState<HiitPage> {
                     print("倒计时${state.countdownSecond}");
                     return ElevatedButton(
                         onPressed: () {
+
                           BlocProvider.of<HiitCubit>(context).toCountDownPage(context);
                         },
                         style: ButtonStyle(

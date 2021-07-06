@@ -1,8 +1,8 @@
 class HiitState {
-  late int currentExerciseInterval;
+  // late int currentExerciseInterval;
   late int currentExerciseIntervalMinute;
   late int currentExerciseIntervalSecond;
-  late int currentRestInterval;
+  // late int currentRestInterval;
   late int currentRestIntervalMinute;
   late int currentRestIntervalSecond;
   late int countdownSecond;
@@ -10,6 +10,12 @@ class HiitState {
   late bool exerciseState;
   late bool restState;
 
+   int get currentExerciseInterval{
+     return currentExerciseIntervalMinute*60+currentExerciseIntervalSecond;
+   }
+   int get currentRestInterval{
+     return currentRestIntervalMinute*60+currentRestIntervalSecond;
+   }
   String get exerciseInterval{
     var minutesStr =
     currentExerciseIntervalMinute.floor().toString().padLeft(2, '0');
@@ -24,8 +30,7 @@ class HiitState {
   }
   HiitState init() {
     return HiitState()
-      ..currentExerciseInterval = 0
-      ..currentRestInterval = 0
+
       ..currentExerciseIntervalMinute = 0
       ..currentExerciseIntervalSecond = 1
       ..currentRestIntervalMinute = 0
@@ -39,8 +44,7 @@ class HiitState {
 
   HiitState clone() {
     return HiitState()
-      ..currentExerciseInterval = currentExerciseInterval
-      ..currentRestInterval = currentRestInterval
+
       ..exerciseState = exerciseState
       ..currentExerciseIntervalMinute = currentExerciseIntervalMinute
       ..currentExerciseIntervalSecond = currentExerciseIntervalSecond

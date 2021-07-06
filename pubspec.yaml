@@ -36,6 +36,7 @@ dependencies:
   sqflite: ^2.0.0+3
   flutter_naive_lib:
     path: D:/sunvuawork/flutter_naive_lib
+  audioplayers: ^0.19.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,9 +53,25 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/d.mp3
+    - assets/c.mp3
+    - assets/bird.mp3
+    - assets/coin.mp3
+    - assets/countdown.mp3
+    - assets/fa.mp3
+    - assets/la.mp3
+    - assets/mi.mp3
+    - assets/note_do.mp3
+    - assets/over.mp3
+    - assets/re.mp3
+    - assets/si.mp3
+    - assets/sol.mp3
+    - assets/trainover.mp3
+    - assets/water_drop.mp3
+    - assets/whistle_blow_1.mp3
+    - assets/wooden_decking.mp3
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

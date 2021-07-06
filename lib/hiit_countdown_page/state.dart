@@ -1,10 +1,16 @@
 class HiitCountdownPageState {
   late int  exerciseCountdownSecond;
   late int  restCountdownSecond;
+  late int  settingExerciseCountdownSecond;
+  late int  settingRestCountdownSecond;
   /// 1 运动 2 休息
   late int runType ;
-  // 1 开始 2 运行 3 结束
+  /// 1 开始 2 运行 3 结束 4 闲时
   late int runState;
+  /// 次数
+  late int frequency;
+
+
 
   String get exerciseInterval{
     var minutesStr =
@@ -12,6 +18,19 @@ class HiitCountdownPageState {
     var  secondsStr = (exerciseCountdownSecond%60).floor().toString().padLeft(2, '0');
     return "$minutesStr:$secondsStr";
   }
+  String get settingExerciseInterval{
+    var minutesStr =
+    (settingExerciseCountdownSecond/60).floor().toString().padLeft(2, '0');
+    var  secondsStr = (settingExerciseCountdownSecond%60).floor().toString().padLeft(2, '0');
+    return "$minutesStr:$secondsStr";
+  }
+  String get settingRestCountdownInterval{
+    var minutesStr =
+    (settingRestCountdownSecond/60).floor().toString().padLeft(2, '0');
+    var  secondsStr = (settingRestCountdownSecond%60).floor().toString().padLeft(2, '0');
+    return "$minutesStr:$secondsStr";
+  }
+
   String get restInterval{
     var minutesStr =
     (restCountdownSecond/60).floor().toString().padLeft(2, '0');
@@ -28,7 +47,10 @@ class HiitCountdownPageState {
       ..exerciseCountdownSecond = exerciseCountdownSecond
       ..restCountdownSecond = restCountdownSecond
       ..runType = runType
+      ..settingExerciseCountdownSecond = settingExerciseCountdownSecond
       ..runState = runState
+      ..frequency = frequency
+      ..settingRestCountdownSecond = settingRestCountdownSecond
     ;
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hiit_timer/hiit_countdown_page/view.dart';
 import 'package:hiit_timer/main_page/view.dart';
 
 void main() {
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       designSize: Size(360, 690),
       builder: () =>MaterialApp(
         title: 'Flutter Demo',
+        routes: {
+          "hiitCountdownPage":(context)=>HiitCountdownPagePage()
+        },
         theme: ThemeData(
           // This is the theme of your application.
           //
